@@ -1,74 +1,93 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Anchala  | Portfolio</title>
+<title>Anchala Kumari | Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 <link rel="stylesheet" href="style.css">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
+<div id="bar"></div><canvas id="web"></canvas><canvas id="fx"></canvas><div class="cur" id="cur"></div>
+<div id="thread"><svg viewBox="0 0 40 40"><g stroke="#cfc7dc" stroke-width="2" fill="none" stroke-linecap="round"><path d="M14 16L4 8M14 20L2 22M14 24L4 34M26 16l10-8M26 20l12 2M26 24l10 10"/></g><ellipse cx="20" cy="26" rx="8" ry="10" fill="#9b4a7c"/><circle cx="20" cy="14" r="6" fill="#120d1a" stroke="#cdbbe0" stroke-width="2"/></svg></div>
 
-<nav>
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
-</nav>
+<nav><a class="logo" href="#home">AK<span>.</span></a>
+ <div class="links"><a href="#home" class="active">Home</a><a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#contact">Contact</a></div></nav>
 
-<header>
-    <h1>Anchala </h1>
-    <div class="typing-text" id="typing-text"></div>
-    <div class="btn-container">
-        <button class="btn" onclick="scrollToSection('about')">Know Me</button>
-        <button class="btn" onclick="scrollToSection('contact')">Contact Me</button>
-    </div>
+<header id="home">
+  <div class="heroimg"></div>
+  <div class="hero-in">
+    <div class="hello">Hey, I'm</div>
+    <h1 id="name">Anchala Kumari</h1>
+    <div class="typing" id="typing"></div>
+    <p class="tagline">BCA (AI) student turning data, code and design into experiences that stick. Click anywhere to shoot a web.</p>
+    <div class="btns"><a class="btn solid mag" href="#projects">See my work</a><a class="btn mag" href="#contact">Say hi</a></div>
+    <div class="stats"><div class="stat"><b data-n="5">0</b>Skill zones</div><div class="stat"><b data-n="3">0</b>Projects</div><div class="stat"><b data-n="15">0</b>Tools</div></div>
+  </div>
+  <div class="hint"><i class="fas fa-chevron-down"></i> scroll</div>
 </header>
 
-<section id="about" class="fade-in">
-    <h2>About Me</h2>
-    <p class="about-text">
-        Hi! I'm Anchala , a BCA with specilization in AI student with a passion for technology and creativity. I specialize in UI/UX design, Power BI, Python, ML, and frontend development using HTML, CSS, and JavaScript. I enjoy building interactive and visually appealing projects that combine functionality with aesthetics. My goal is to create digital experiences that are engaging, efficient, and leave a lasting impression on users.
-    </p>
-</section>
+<div class="ticker"><div id="tick"></div></div>
 
-<section id="skills" class="fade-in">
-    <h2>Skills</h2>
-    <div class="skills-container">
-        <div class="skill"><i class="fas fa-paint-brush"></i> UI/UX</div>
-        <div class="skill"><i class="fas fa-chart-line"></i> Power BI</div>
-        <div class="skill"><i class="fab fa-python"></i> Python</div>
-        <div class="skill"><i class="fas fa-robot"></i> ML</div>
-        <div class="skill"><i class="fab fa-html5"></i> HTML</div>
-        <div class="skill"><i class="fab fa-css3-alt"></i> CSS</div>
-        <div class="skill"><i class="fab fa-js-square"></i> JavaScript</div>
+<main>
+<section id="about" class="reveal">
+  <h2 class="sc">About Me</h2>
+  <div class="about">
+    <div class="hex"><div class="mask" id="mask"><span>AK</span></div></div>
+    <div class="panel">
+      <p>Hi! I'm Anchala Kumari, a BCA AI student with a passion for technology and creativity. I work across UI/UX design, Power BI, Python, ML and frontend development with HTML, CSS and JavaScript, and I'm growing into cloud with Microsoft Azure and AI-powered design tools.</p>
+      <p style="margin-top:14px">I like building interactive, good-looking projects where function and style work together, and digital experiences people remember.</p>
     </div>
+  </div>
 </section>
 
-<section id="projects" class="fade-in">
-    <h2>Projects</h2>
-    <div class="projects-container">
-        <div class="project-card"><h3>Portfolio</h3></div>
-        <div class="project-card"><h3>My Power BI Dashboards</h3></div>
-        <div class="project-card"><h3>Diabetes Predictor (In Development)</h3></div>
-        <div class="project-card"><h3>ATM Software</h3></div>
-    </div>
+<section id="skills" class="reveal">
+  <h2 class="sc">Skills</h2>
+  <div class="tabs" id="tabs"><button class="tab on" data-f="all">All</button><button class="tab" data-f="data">Data &amp; AI</button><button class="tab" data-f="front">Frontend</button><button class="tab" data-f="design">Design</button><button class="tab" data-f="ai">AI Tools</button><button class="tab" data-f="cloud">Cloud</button></div>
+  <div class="chips" id="chips">
+    <div class="chip" data-c="data"><i class="fas fa-chart-line"></i>Power BI</div>
+    <div class="chip" data-c="data"><i class="fab fa-python"></i>Python</div>
+    <div class="chip" data-c="data"><i class="fas fa-robot"></i>Machine Learning</div>
+    <div class="chip" data-c="data"><i class="fas fa-brain"></i>Prompt Engineering</div>
+    <div class="chip" data-c="front"><i class="fab fa-html5"></i>HTML</div>
+    <div class="chip" data-c="front"><i class="fab fa-css3-alt"></i>CSS</div>
+    <div class="chip" data-c="front"><i class="fab fa-js-square"></i>JavaScript</div>
+    <div class="chip" data-c="design"><i class="fas fa-paint-brush"></i>UI/UX</div>
+    <div class="chip" data-c="design"><i class="fab fa-figma"></i>Figma</div>
+    <div class="chip" data-c="design"><i class="fas fa-palette"></i>Canva</div>
+    <div class="chip" data-c="design"><i class="fas fa-vector-square"></i>Wireframing</div>
+    <div class="chip" data-c="ai"><i class="fas fa-wand-magic-sparkles"></i>ChatGPT</div>
+    <div class="chip" data-c="ai"><i class="fas fa-comments"></i>Claude</div>
+    <div class="chip" data-c="ai"><i class="fas fa-image"></i>Midjourney</div>
+    <div class="chip" data-c="ai"><i class="fas fa-code"></i>GitHub Copilot</div>
+    <div class="chip" data-c="cloud"><i class="fab fa-microsoft"></i>Microsoft Azure</div>
+    <div class="chip" data-c="cloud"><i class="fab fa-github"></i>Git &amp; GitHub</div>
+  </div>
 </section>
 
-<section id="contact" class="fade-in">
-    <h2>Contact Me</h2>
-    <div class="contact-container">
-        <div class="contact-box">GitHub<a href="https://github.com/tanukashyap07" target="_blank">Visit GitHub</a></div>
-        <div class="contact-box">LinkedIn<a href="https://linkedin.com/in/ianchala" target="_blank">Visit LinkedIn</a></div>
-        <div class="contact-box">Email<a href="mailto:aanyakashyap838@gmail.com">Send Message</a></div>
-    </div>
+<section id="projects" class="reveal">
+  <h2 class="sc">Projects</h2>
+  <div class="grid">
+    <div class="card" data-p="0" tabindex="0"><div class="ic"><i class="fas fa-globe"></i></div><h3>Portfolio</h3><p>A hand-coded, animated personal site with an interactive web background.</p><div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div><div class="more">Open details <i class="fas fa-arrow-right"></i></div></div>
+    <div class="card" data-p="1" tabindex="0"><div class="ic"><i class="fas fa-chart-pie"></i></div><h3>My Power BI Dashboards</h3><p>Interactive dashboards that turn raw data into clear visuals.</p><div class="tags"><span>Power BI</span><span>DAX</span><span>Data Viz</span></div><div class="more">Open details <i class="fas fa-arrow-right"></i></div></div>
+    <div class="card" data-p="2" tabindex="0"><span class="soon">In progress</span><div class="ic"><i class="fas fa-heart-pulse"></i></div><h3>Diabetes Predictor</h3><p>A machine learning model that predicts diabetes risk from health data.</p><div class="tags"><span>Python</span><span>ML</span><span>Healthcare</span></div><div class="more">Open details <i class="fas fa-arrow-right"></i></div></div>
+  </div>
 </section>
 
-<footer>&copy; 2025 Anchala 
-    
-    | All Rights Reserved</footer>
+<section id="contact" class="reveal">
+  <h2 class="sc">Contact Me</h2>
+  <div class="contact">
+    <a class="tilt" href="https://github.com/tanukashyap07" target="_blank" rel="noopener"><i class="fab fa-github"></i>GitHub<small>Visit GitHub</small></a>
+    <a class="tilt" href="https://linkedin.com/in/ianchala" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i>LinkedIn<small>Visit LinkedIn</small></a>
+    <a class="tilt" href="mailto:aanyakashyap838@gmail.com" id="mail"><i class="fas fa-envelope"></i>Email<small>Click to copy address</small></a>
+  </div>
+</section>
+</main>
+<footer>&copy; 2025 Anchala Kumari | All Rights Reserved</footer>
+
+<div class="modal" id="modal"><div class="mbox"><button class="x" aria-label="Close">&times;</button><div id="mc"></div></div></div>
+<div id="toast">Email copied</div>
 
 <script src="script.js"></script>
 </body>
